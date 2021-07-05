@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>System do zarządzania Eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Wybierz styl swojego eventu:</h1>
+<h2>
+<form action="#" th:action="@{/saveStyle}" th:object="${event}" method="post">
+    <label>Dostępne style: </label>
+    <input th:type="hidden" th:field="${event.id}" />
+    <select th:field="${event.styl}">
+        <option th:each="type:${style}" th:value="${type}"
+                th:text="${type}"
+        ></option>
+    </select>
+    <div>
+    <button type="submit" value="Dalej">Dalej</button>
+    </div>
+</form>
+</h2>
+</body>
+</html>

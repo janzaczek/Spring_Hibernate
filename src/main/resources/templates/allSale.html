@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>System do zarządzania Eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Wybierz sale na swój event:</h1>
+<h2>Dostępne sale:</h2>
+<form action="#" th:action="@{/saveSala}" th:object="${salaId}" method="post">
+    <select th:field="${salaId.id}">
+        <option th:each="type:${sale}" th:value="${type.id}"
+                th:text="${type.nazwa}+ ' - liczba miejsc: '+${type.liczbaMiejsc}"
+            ></option>
+    </select>
+    <button type="submit" value="Dalej">Dalej</button>
+    <div>
+        <button name="button"><a href="/resignation">Zrezygnuj</a></button>
+    </div>
+</form>
+
+</body>
+</html>

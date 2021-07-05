@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dodano datę nowego eventu</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Twój event:</h1>
+<h4>
+<p th:text="'Data: '+${event.date}" />
+<p th:text="'Sala: '+${event.sala.nazwa}+ ' Liczba miejsc: ' +${event.sala.liczbaMiejsc}" />
+Dodatki:
+<p th:each="type:${event.getDodatekGraficzny()}" th:text="'Nazwa: '+${type.nazwa}+ '  ||  Typ: '+${type.typ}+ '  ||  Opis: ' +${type.opis}" />
+<p th:text="'Liczba uczestników: '+${event.liczbaUczestnikow}" />
+<p th:text="'Styl: '+${event.styl}" />
+</h4>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Dodatki dla wybranego eventu:</h1>
+<ul>
+    <li th:each="type:${dodatki}"
+            th:text="'Typ: '+${type.typ} + ' Opis: ' +${type.opis}"
+    ></li>
+</ul>
+</body>
+</html>

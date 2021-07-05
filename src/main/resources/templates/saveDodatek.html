@@ -1,0 +1,22 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>System do zarządzania eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1 class="mt-5">Dodano dodatki dla twojego eventu:</h1>
+<h3>
+<form id = "sale" th:action="@{/dodajUczestnikow}"  method="post">
+    <label>
+    <p th:each="type:${dodatek}" th:text="'Nazwa: '+${type.nazwa}+ '  ||  Typ: '+${type.typ}+ '  ||  Opis: ' +${type.opis}" >
+    </label>
+    <div>
+        <button type="submit" value="Dalej">Dalej</button>
+    </div>
+</form>
+</h3>
+</body>
+</html>

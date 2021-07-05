@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dodano datę nowego eventu</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1 class="mt-5">Dodano nowy event!</h1>
+<h2>
+Twoja data eventu: <p th:text="${{event.date}}" />
+<form id = "sale" th:action="@{/allSale}"  method="get">
+    <button type="submit" value="Dalej">Dalej</button>
+</form>
+</h2>
+</body>
+</html>

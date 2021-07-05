@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Wybierz dla którego eventu chcesz zobaczyć dodatki graficzne:</h1>
+<form id="form" action="#" th:action="@{/zadanie2}" th:object="${event}" method="get">
+<select th:field="${event.id}">
+    <option th:each="type:${eventy}" th:value="${type.id}"
+            th:text="'Event numer: '+${type.id}" th:onclick="document.getElementById('form').submit()"
+    ></option>
+</select>
+</form>
+</body>
+</html>

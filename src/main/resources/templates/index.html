@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>System do zarządzania eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+
+<h1>Stwórz nowy event</h1>
+<form action="#" th:action="@{/save}" th:object="${event}" method="post">
+    <label >
+        Wybierz preferowaną datę eventu: <input type="date" name="event" min="2021-06-01" th:required="true" max="2030-04-30" th:field="*{date}">
+<!--        Godzina: <input type="time" id="appt" name="appt" min="06:00" max="24:00" th:field="*{date}" >-->
+    </label>
+    <button type="submit" value="Dalej">Dalej</button>
+</form>
+</body>
+</html>

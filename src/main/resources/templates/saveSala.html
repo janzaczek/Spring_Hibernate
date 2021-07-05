@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>System do zarządzania eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Dodano salę dla twojego eventu:</h1>
+<form action="#" th:action="@{/allDodatki}" th:object="${sala}"  method="get">
+    <h2>
+        <p th:text="'Sala: '+${sala.nazwa}" />
+    </h2>
+    <h3>
+        <p th:text="'Liczba miejsc: '+${sala.liczbaMiejsc}" />
+    </h3>
+    <button type="submit" value="Dalej">Dalej</button>
+</form>
+</body>
+</html>

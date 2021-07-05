@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dodano datę nowego eventu</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Uczestnicy</h1>
+<h2>
+    <p th:text="'Liczba uczestników twojego eventu: '+${event.liczbaUczestnikow}" />
+</h2>
+    <form id = "sale" th:action="@{/allStyle}"  method="get">
+        <button type="submit" value="Dalej">Dalej</button>
+</form>
+</body>
+</html>

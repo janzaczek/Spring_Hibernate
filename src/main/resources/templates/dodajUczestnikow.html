@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>System do zarządzania Eventem</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+</head>
+<body>
+<h1>Uczestnicy</h1>
+<br/>
+<form action="#" th:action="@{/saveUczestnikow}" th:object="${event}" method="post">
+    <label>Podaj liczbe uczestników eventu:</label>
+        <input th:type="hidden" th:field="${event.id}" />
+        <input th:type="number" th:required="true" th:min="10" th:field="${event.liczbaUczestnikow}" />
+    <div>
+        <button type="submit" value="Dalej">Dalej</button>
+    </div>
+</form>
+</body>
+</html>
