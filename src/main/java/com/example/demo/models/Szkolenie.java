@@ -23,7 +23,6 @@ public class Szkolenie {
     @Column(name = "opis")
     private String opis;
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 //    @JoinColumn(name = "odbyteSzkolenie")
     private List<OdbyteSzkolenie> odbyteSzkolenia = new ArrayList<>();

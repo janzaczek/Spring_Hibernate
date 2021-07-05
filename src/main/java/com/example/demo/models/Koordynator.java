@@ -20,7 +20,6 @@ public class Koordynator extends Pracownik{
     @Column(name = "id_Koordynator")
     private Long id;
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 //    @JoinColumn(name = "id_Event")
     private List<Event> event = new ArrayList<>();

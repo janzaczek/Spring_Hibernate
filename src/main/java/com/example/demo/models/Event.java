@@ -65,7 +65,6 @@ public class Event  {
     @JoinColumn(name = "id_Sala")
     private Sala sala;
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 //    @JoinColumn(name = "id_Uczestnik")
     private List<Uczestnik> uczestnik = new ArrayList<>();
@@ -80,7 +79,6 @@ public class Event  {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
     private List<DodatekGraficzny> dodatekGraficzny = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Ochroniarz> ochroniarz = new ArrayList<>();
 

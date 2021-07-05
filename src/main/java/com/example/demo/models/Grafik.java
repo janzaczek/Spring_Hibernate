@@ -25,12 +25,10 @@ public class Grafik extends Pracownik{
     @Column(name = "liczbaOprawGraficznych")
     private Long liczbaOprawGraficznych;
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 //    @JoinColumn(name = "kursyGraficzne")
     private List<KursGraficzny> kursGraficzny = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 //    @JoinColumn(name = "dodatkiGraficzne")
     private List<DodatekGraficzny> dodatekGraficzny = new ArrayList<>();

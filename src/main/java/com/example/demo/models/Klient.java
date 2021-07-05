@@ -24,7 +24,6 @@ public abstract class Klient {
     @Column(unique = true, name = "numerKlienta")
     private int numerKlienta;
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
 //    @JoinColumn(name = "id_Event")
     private List<Event> event = new ArrayList<>();
