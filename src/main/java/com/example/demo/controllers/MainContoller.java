@@ -24,20 +24,14 @@ import java.util.List;
 //@RestController
 public class MainContoller {
 
-    @Autowired
     private final SalaService salaService;
-
-    @Autowired
     private final EventService eventService;
-
-    @Autowired
     private final UczestnikService uczestnikService;
-
-    @Autowired
     private final DodatekGraficznyService dodatekGraficznyService;
 
     Event event;
 
+    @Autowired
     public MainContoller(SalaService salaService, EventService eventService, UczestnikService uczestnikService,
                          DodatekGraficznyService dodatekGraficznyService){
         this.salaService = salaService;
