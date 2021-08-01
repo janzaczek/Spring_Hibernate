@@ -7,6 +7,10 @@
 </head>
 <body>
 <h1>Wszystkie eventy:</h1>
-<p th:text="${eventy}" th:value="0"/>
+<ul>
+    <li th:each="type:${eventy}"
+        th:text="'Sala: '+${type.sala.getNazwa()} + ' Styl: ' +${type.styl.name()}+ ' Dodatki graficzne: ' +${type.dodatekGraficzny}"
+    ></li>
+</ul>
 </body>
 </html>
